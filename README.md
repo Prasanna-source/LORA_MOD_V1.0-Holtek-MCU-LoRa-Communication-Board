@@ -6,13 +6,13 @@ This board has been made to run on 24V 5A DC supply. Main triggering pulse provi
 # Features
 Holtek HT66F0185 MCU (24-SSOP) as the main controller
 Leirda WB28 LoRa module for long-range wireless communication
-U.FL / IPEX antenna connector (J4) (CONUFL001-SMD)
-UART0 header (J3) – 4-pin JST-XH, for external communication
-Programming header (J2) – 5-pin JST-XH, for flashing the MCU
+U.FL / IPEX antenna connector (J4, CONUFL001-SMD)
+UART0 header (J3): 4-pin white JST-XH connector for external communication
+Programming header (J2): 5-pin white JST-XH connector for flashing the MCU
 On-board 3.3 V regulation (LM1117-3.3)
 Reverse-polarity protection diode on the supply input (D1, M7)
 Diode-isolated TXD/RXD lines between the header and the MCU (D7, D8 with 2.7 kΩ resistors)
-2-layer PCB with ground pour, two mounting holes
+2-layer PCB with ground pour and two mounting holes
 
 # Block Diagram
  5V (J3 / J2) ──► D1 (M7) ──► LM1117-3.3 ──► +3V3 ──┬──► HT66F0185 (U2)
@@ -23,42 +23,42 @@ Diode-isolated TXD/RXD lines between the header and the MCU (D7, D8 with 2.7 kΩ
 
 
  # Connectors
- J3 – UART0 (4-pin JST-XH, B4B-XH-A)
-Pin	Signal	Notes
-1	GND	Ground
-2	TXD	Serial line (via D8 / R3 to MCU)
-3	RXD	Serial line (via D7 / R2 to MCU)
-4	+5V	Supply input (through D1)
+J3 – UART0 (4-pin JST-XH, B4B-XH-A)
+Pin	   Signal	  Notes
+ 1	     GND	    Ground
+ 2	     TXD	    Serial line (via D8 / R3 to MCU)
+ 3	     RXD	    Serial line (via D7 / R2 to MCU)
+ 4	     +5V	    Supply input (through D1)
 
 J2 – Programming (5-pin JST-XH, B5B-XH-A)
-Pin	Signal	Notes
-1	+5V	
-2	SWDIO	Debug/programming data
-3	SWCLK	Debug/programming clock
-4	NRESET	Reset (10 kΩ pull-up to 3V3)
-5	GND	Ground
+Pin	    Signal	    Notes
+1	       +5V	
+2	      SWDIO	     Debug/programming data
+3	      SWCLK	     Debug/programming clock
+4	      NRESET	    Reset (10 kΩ pull-up to 3V3)
+5	       GND	      Ground
 
 J4 – Antenna
 U.FL (IPEX) connector for the LoRa antenna. Never power or transmit without an antenna attached.
 
 # Bill of Materials
-Ref	Value	Description / Package
-U1	Leirda WB28	LoRa module
-U2	HT66F0185-24SSOP	Holtek MCU
-U3	LM1117-3.3	3.3 V LDO regulator (SOT-223)
-D1	M7	Rectifier diode, reverse-polarity protection
-D7, D8	1N4148W	Signal diodes (SOD-123)
-R1, R4	10 kΩ	Reset pull-ups (SMD)
-R2, R3	2.7 kΩ	UART line resistors (SMD)
-C1	2.2 µF	MCU VDD decoupling
-C2	0.1 µF	LoRa module decoupling
-C3	0.22 µF	LoRa module decoupling
-C4	100 nF	3V3 decoupling
-C6, C7	47 µF	Bulk capacitors (regulator input/output, electrolytic)
-C11	1 µF	3V3 decoupling (electrolytic)
-J2	B5B-XH-A	5-pin programming header
-J3	B4B-XH-A(LF)(SN)	4-pin UART header
-J4	CONUFL001-SMD	U.FL antenna connector
+Ref   	  Value	                Description / Package
+U1	      Leirda WB28	          LoRa module
+U2	      HT66F0185-24SSOP	     Holtek MCU
+U3	      LM1117-3.3	           3.3 V LDO regulator (SOT-223)
+D1    	  M7	                   Rectifier diode, reverse-polarity protection
+D7,D8	   1N4148W	              Signal diodes (SOD-123)
+R1,R4	   10kΩ	                 Reset pull-ups (SMD)
+R2,R3	   2.7kΩ	                UART line resistors (SMD)
+C1	      2.2µF	                MCU VDD decoupling
+C2	      0.1µF	                LoRa module decoupling
+C3	      0.22µF	               LoRa module decoupling
+C4	      100nF	                3V3 decoupling
+C6,C7	   47µF	                 Bulk capacitors (regulator input/output, electrolytic)
+C11	     1µF	                  3V3 decoupling (electrolytic)
+J2	      B5B-XH-A	             5-pin programming header
+J3	      B4B-XH-A(LF)(SN)	      4-pin UART header
+J4	      CONUFL001-SMD	        UFL antenna connector
 
 # Specifications
 Parameter	Value
