@@ -108,7 +108,7 @@ Check peak LoRa TX current against the LM1117 capability and thermal limits (dro
 This project is licensed under the MIT License (hardware: consider CERN-OHL). See the LICENSE file.
 
 # Author
-Your Name GitHub: @bagnikarprasanna Email: your.email@example.com
+Your Name GitHub: @bagnikarprasanna Email: prasanna.bagnikar@gmail.com
 
 # Acknowledgements
 Holtek Semiconductor – HT66F0185 documentation
